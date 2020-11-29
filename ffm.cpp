@@ -497,7 +497,7 @@ bool check_same_txt_bin(string txt_path, string bin_path) {
 
 } // unnamed namespace
 
-ffm_model::~ffm_model() {
+void ffm_model::release() {
     if(W != nullptr) {
 #ifndef USESSE
         free(W);

@@ -24,7 +24,7 @@ struct ffm_model {
     ffm_int k; // number of latent factors
     ffm_float *W = nullptr;
     bool normalization;
-    ~ffm_model();
+    void release();
 };
 
 struct ffm_parameter {
